@@ -9,7 +9,7 @@ import java.net.http.HttpResponse;
 import java.util.Properties;
 
 public class CurrencyExchange {
-    private String apiKey;
+    private final String apiKey;
     private String currencyToBeExchanged;
     private String finalCurrency;
     private double amount;
@@ -31,13 +31,12 @@ public class CurrencyExchange {
         this.amount = amount;
         URI url = URI.create("https://v6.exchangerate-api.com/v6/" + apiKey + "/pair/" + currencyToBeExchanged + "/" + finalCurrency + "/" + amount);
 
-        HttpClient client = HttpClient.newHttpClient();
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(url)
-                .build();
-
         try {
+            HttpClient client = HttpClient.newHttpClient();
+
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(url)
+                    .build();
             HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
             Currency currency = new Gson().fromJson(response.body(), Currency.class);
