@@ -51,23 +51,39 @@ The application will automatically retrieve this environment variable at runtime
    echo "config.properties" >> .gitignore
 
 ### Usage
-To start the application, run the Principal class from the command line or an IDE.
+- To start the application, run the Principal class from the command line or an IDE.
    ```bash
    java -cp your-compiled-jar-file.jar Principal
 
+
 Once running, follow the on-screen menu to select your desired currency conversion.
 ### Example Output
-   ```markdown
-   **************************************
-   *Bienvenido/a al conversor de monedas*
-   *****************MENU*****************
-   **Seleccione una divisa a convertir***
-   * 1.- Dólar(USD) a Peso Chileno(CLP) *
-   * 2.- Peso Chileno a Dólar           *
-   * 9.- Salir                          *
-   ** Seleccione una opción valida:    **
-   **************************************
+   ```plaintext
+   ***********************************************
+   **** Bienvenido/a al conversor de monedas *****
+   ******************* MENU **********************
+   ***** Seleccione una divisa a convertir *******
+   * 1.- Dólar(USD) a Peso Chileno(CLP)          *
+   * 2.- Peso Chileno a Dólar                    *
+   * 3.- Euro(EUR) a Peso Chileno(CLP)           *
+   * 4.- Peso Chileno a Euro(EUR)                *
+   * 5.- Real Brasileño(BRL) a Peso Chileno(CLP) *
+   * 6.- Peso Chileno a Real Brasileño(BRL)      *
+   * 9.- Salir                                   *
+   **      Seleccione una opción valida:        **
+   ***********************************************
+   ```
 
 ### Code Overview
 ### CurrencyExchange Class
 This class is responsible for making API requests to the ExchangeRate API and calculating conversion rates.
+
+### Currency Record
+Currency is a Java record that represents the API response. It contains fields such as conversionRate, conversionResult, and others to hold the conversion data.
+
+### Troubleshooting
+- **Error**: Could not load API key:
+   - Verify that your API_KEY environment variable is set, or the config.properties file is correctly set up.
+- **Error connecting to the API**:
+   - Check your internet connection and ensure the API key is valid.
+
