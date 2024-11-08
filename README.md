@@ -23,9 +23,51 @@ This is a Java application for currency conversion using the ExchangeRate API. I
    git clone https://github.com/your-username/your-repo-name.git
    cd your-repo-name
 
-2. **Set up the API Key
+2. **Set up the API Key**
 
 You have two options to configure the API key securely without hard-coding it into your code.
 
-Option 1: Use Environment Variables
+**Option 1: Use Environment Variables**
 Set an environment variable named API_KEY with your ExchangeRate API key.
+
+- **On Windows**: Run this in Command Prompt:
+
+   ```bash
+   setx API_KEY "your_api_key_here"
+- **On macOS/Linux**: Run this in the terminal:
+   ```bash
+   export API_KEY="your_api_key_here"
+
+The application will automatically retrieve this environment variable at runtime.
+
+**Option 2: Use a .properties File**
+- Create a file named config.properties in the project root directory.
+
+- Add the following content to config.properties, replacing "your_api_key_here" with your actual API key:
+   ```properties
+   api_key=your_api_key_here
+- In config.properties, this file should be excluded from version control to keep your API key secure. Add it to your .gitignore file:
+   ```bash
+   echo "config.properties" >> .gitignore
+
+### Usage
+To start the application, run the Principal class from the command line or an IDE.
+   ```bash
+   java -cp your-compiled-jar-file.jar Principal
+
+Once running, follow the on-screen menu to select your desired currency conversion.
+### Example Output
+   ```markdown
+   **************************************
+   *Bienvenido/a al conversor de monedas*
+   *****************MENU*****************
+   **Seleccione una divisa a convertir***
+   * 1.- Dólar(USD) a Peso Chileno(CLP) *
+   * 2.- Peso Chileno a Dólar           *
+   * 9.- Salir                          *
+   ** Seleccione una opción valida:    **
+   **************************************
+
+### Code Overview
+### CurrencyExchange Class
+This class is responsible for making API requests to the ExchangeRate API and calculating conversion rates.
