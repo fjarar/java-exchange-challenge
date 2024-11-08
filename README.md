@@ -70,7 +70,8 @@ Once running, follow the on-screen menu to select your desired currency conversi
    * 5.- Real Brasileño(BRL) a Peso Chileno(CLP) *
    * 6.- Peso Chileno a Real Brasileño(BRL)      *
    * 9.- Salir                                   *
-   **      Seleccione una opción valida:        **
+   * 0.- Ver historial de conversiones           *
+   **                                           **
    ***********************************************
    ```
 
