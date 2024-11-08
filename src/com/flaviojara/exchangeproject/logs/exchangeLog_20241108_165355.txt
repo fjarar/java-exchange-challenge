@@ -1,0 +1,4 @@
+[
+  "La conversión de 1500.0 [USD] a [CLP] es igual a: 1440994.05 [CLP]\n realizada con fecha: 08/11/2024 16:53:33",
+  "La conversión de 500.0 [EUR] a [CLP] es igual a: 516537.25 [CLP]\n realizada con fecha: 08/11/2024 16:53:43"
+]
