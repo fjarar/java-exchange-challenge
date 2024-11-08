@@ -88,7 +88,7 @@ This class is responsible for making API requests to the ExchangeRate API and ca
 
 ## Log File Generation
 
-After closing the application, a log file named `currency_exchange_log.txt` is generated in the root directory. This file contains a history of all currency conversion transactions performed during the session.
+After closing the application, a log file named `exchangeLog_[year/month/day]_[HourMinutesSeconds].txt` is generated in the root directory. This file contains a history of all currency conversion transactions performed during the session.
 
 ### Log File Contents
 
