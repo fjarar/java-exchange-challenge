@@ -86,7 +86,26 @@ This class is responsible for making API requests to the ExchangeRate API and ca
   - `currencyExchange(String baseCurrency, String targetCurrency, double amount)`: 
      Converts the amount from the base currency to the target currency using real-time exchange rates from the API.
 
+## Log File Generation
 
+After closing the application, a log file named `currency_exchange_log.txt` is generated in the root directory. This file contains a history of all currency conversion transactions performed during the session.
+
+### Log File Contents
+
+The log file records:
+- The date and time of each transaction.
+- The original currency and amount.
+- The target currency and the converted amount.
+- The exchange rate used.
+
+### Example Log Entry
+```plaintext
+"La conversión de 1500.0 [USD] a [CLP] es igual a: 1440994.05 [CLP]\n realizada con fecha: 08/11/2024 16:53:33",
+"La conversión de 500.0 [EUR] a [CLP] es igual a: 516537.25 [CLP]\n realizada con fecha: 08/11/2024 16:53:43"
+```
+
+### Important Notes
+- Ensure the application has write permissions in the directory where it is run.
 
 ### Troubleshooting
 - **Error**: `Could not load API key`:
