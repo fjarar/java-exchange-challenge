@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f6a86fb-b106-42a1-b960-5acf54756b8c" name="Changes" comment="was changed the toString method and added more currency types to exchange">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CurrencyExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyExchange.java" afterDir="false" />
+    <list default="true" id="3f6a86fb-b106-42a1-b960-5acf54756b8c" name="Changes" comment="adding a safety way to use the api key">
+      <change afterPath="$PROJECT_DIR$/src/com/flaviojara/exchangeproject/models/ExchangeLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flaviojara/exchangeproject/models/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CurrencyExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flaviojara/exchangeproject/models/CurrencyExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/flaviojara/exchangeproject/principal/Principal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -36,6 +39,9 @@
     "accountId": "30ae8d70-8136-4e8e-bbf6-2fbffe88706b"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -106,7 +112,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731010946126</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="adding a safety way to use the api key">
+      <option name="closed" value="true" />
+      <created>1731012196413</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731012196413</updated>
+    </task>
+    <task id="LOCAL-00007" summary="adding a safety way to use the api key">
+      <option name="closed" value="true" />
+      <created>1731012280021</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1731012280021</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +148,7 @@
     <MESSAGE value="adding some API callings" />
     <MESSAGE value="added a new API call to convert currency and was added a MENU" />
     <MESSAGE value="was changed the toString method and added more currency types to exchange" />
-    <option name="LAST_COMMIT_MESSAGE" value="was changed the toString method and added more currency types to exchange" />
+    <MESSAGE value="adding a safety way to use the api key" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding a safety way to use the api key" />
   </component>
 </project>

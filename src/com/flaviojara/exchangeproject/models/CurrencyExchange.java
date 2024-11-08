@@ -1,3 +1,5 @@
+package com.flaviojara.exchangeproject.models;
+
 import com.google.gson.Gson;
 
 import java.io.FileInputStream;
@@ -6,6 +8,10 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class CurrencyExchange {
@@ -14,6 +20,8 @@ public class CurrencyExchange {
     private String finalCurrency;
     private double amount;
     private double conversionResult;
+
+    private final List<String> exchangeHistory = new ArrayList<>();
 
     public CurrencyExchange() {
         Properties properties = new Properties();
@@ -29,6 +37,11 @@ public class CurrencyExchange {
         this.currencyToBeExchanged = currencyToBeExchanged;
         this.finalCurrency = finalCurrency;
         this.amount = amount;
+
+        // Create a timestamp string with the current date and time
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        String timestamp = LocalDateTime.now().format(formatter);
+
         URI url = URI.create("https://v6.exchangerate-api.com/v6/" + apiKey + "/pair/" + currencyToBeExchanged + "/" + finalCurrency + "/" + amount);
 
         try {
@@ -41,10 +54,16 @@ public class CurrencyExchange {
                     .send(request, HttpResponse.BodyHandlers.ofString());
             Currency currency = new Gson().fromJson(response.body(), Currency.class);
             this.conversionResult = currency.conversion_result();
+
+            exchangeHistory.add(this.toString()+" realizada con fecha: "+timestamp);
             return currency;
         } catch (Exception e) {
             throw new RuntimeException("No se encontro la divisa ingresada");
         }
+    }
+
+    public List<String> getExchangeHistory() {
+        return exchangeHistory;
     }
 
     @Override

@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Map;
+package com.flaviojara.exchangeproject.models;
 
 public record Currency(String base_code, String target_code, double conversion_rate, double conversion_result) {
 }
