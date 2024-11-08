@@ -58,7 +58,7 @@ The application will automatically retrieve this environment variable at runtime
 
 Once running, follow the on-screen menu to select your desired currency conversion.
 ### Example Output
-   ```plaintext
+   ```markdown
    ***********************************************
    **** Bienvenido/a al conversor de monedas *****
    ******************* MENU **********************
@@ -75,15 +75,24 @@ Once running, follow the on-screen menu to select your desired currency conversi
    ```
 
 ### Code Overview
-### CurrencyExchange Class
+### `CurrencyExchange` Class
 This class is responsible for making API requests to the ExchangeRate API and calculating conversion rates.
 
 ### Currency Record
 Currency is a Java record that represents the API response. It contains fields such as conversionRate, conversionResult, and others to hold the conversion data.
 
+- **Methods**:
+  - `currencyExchange(String baseCurrency, String targetCurrency, double amount)`: 
+     Converts the amount from the base currency to the target currency using real-time exchange rates from the API.
+
+ ### `Currency` Record
+ `Currency` is a Java record that represents the API response. It contains fields such as `conversionRate`, `conversionResult`, and others to hold the conversion data.
+
 ### Troubleshooting
-- **Error**: Could not load API key:
-   - Verify that your API_KEY environment variable is set, or the config.properties file is correctly set up.
+- **Error**: `Could not load API key`:
+   - Verify that your `API_KEY` environment variable is set, or the `config.properties` file is correctly set up.
 - **Error connecting to the API**:
    - Check your internet connection and ensure the API key is valid.
 
+### License
+This project is licensed under the MIT License.
