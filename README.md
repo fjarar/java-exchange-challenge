@@ -78,15 +78,14 @@ Once running, follow the on-screen menu to select your desired currency conversi
 ### `CurrencyExchange` Class
 This class is responsible for making API requests to the ExchangeRate API and calculating conversion rates.
 
-### Currency Record
-Currency is a Java record that represents the API response. It contains fields such as conversionRate, conversionResult, and others to hold the conversion data.
+### `Currency` Record
+`Currency` is a Java record that represents the API response. It contains fields such as `conversionRate`, `conversionResult`, and others to hold the conversion data.
 
 - **Methods**:
   - `currencyExchange(String baseCurrency, String targetCurrency, double amount)`: 
      Converts the amount from the base currency to the target currency using real-time exchange rates from the API.
 
- ### `Currency` Record
- `Currency` is a Java record that represents the API response. It contains fields such as `conversionRate`, `conversionResult`, and others to hold the conversion data.
+
 
 ### Troubleshooting
 - **Error**: `Could not load API key`:
